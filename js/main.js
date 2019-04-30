@@ -1,3 +1,5 @@
+//fix for scroll bounce
+document.body.addEventListener('touchmove', function(e) { e.preventDefault()}, { passive: false });
 
 var mesh;
 var bodyMesh; 
@@ -15,7 +17,7 @@ renderer.domElement.style.overflow = "hidden";
 document.body.appendChild( renderer.domElement );
 
 var scene = new THREE.Scene();
-scene.background = new THREE.Color( 0xcccccc );
+scene.background = new THREE.Color( 0xffffff );
 scene.fog = new THREE.Fog( 0xcccccc, 200, 1000);
 var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 var controls = new THREE.OrbitControls( camera);
