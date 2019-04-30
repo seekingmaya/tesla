@@ -1,5 +1,25 @@
+*,
+body,
+html,
+*::after,
+*::before
+    {
+    box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	overflow: hidden;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
 body {
-	overscroll-behavior: none;
+    height: 100%;
+    min-height: 100%; 
+    display: flex;
+	/* overscroll-behavior: none; */
 	overflow: hidden;
 	margin: 0;
 	background-color: #cccccc;
@@ -7,7 +27,7 @@ body {
 }
 
 canvas {
-	overscroll-behavior: none;
+	/* overscroll-behavior: none; */
 	width:	100%;
 	height: 100%;
 	position:relative;
@@ -21,9 +41,7 @@ canvas-container {
 }
 
 #loading {
-	overscroll-behavior: none;
-	width: window.innerWidth;
-	height: window.innerHeight;
+	/* overscroll-behavior: none; */
 	background: #cccccc;
 	position:absolute;
 	z-index: 0;
