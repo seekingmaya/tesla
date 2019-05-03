@@ -1,6 +1,7 @@
 //fix for scroll bounce
 document.body.addEventListener('touchmove', function(e) { e.preventDefault()}, { passive: false });
 
+
 var mesh;
 var bodyMesh; 
 var currentColor;
@@ -17,7 +18,7 @@ renderer.domElement.style.overflow = "hidden";
 document.body.appendChild( renderer.domElement );
 
 var scene = new THREE.Scene();
-scene.background = new THREE.Color( 0xffffff );
+scene.background = new THREE.Color( 0xcccccc );
 scene.fog = new THREE.Fog( 0xcccccc, 200, 1000);
 var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 var controls = new THREE.OrbitControls( camera);
@@ -159,26 +160,27 @@ function init() {
 	var intensity = 1;
 	var rectLight1 = new THREE.RectAreaLight( 0xffffff, intensity,  width, height );
 	var rectLight2 = new THREE.RectAreaLight( 0xffffff, intensity,  width, height );			
-	rectLight1.position.set( 10000, 500, 10000 );
+	rectLight1.position.set( 10000, 0, -10000 );
 	rectLight1.lookAt( 0, 0, 0 );		
-	rectLight2.position.set( -10000, 500, -10000 );
-	rectLight2.lookAt( 0, 0, 0 );					
+	// rectLight2.position.set( -10000, 100, -10000 );
+	// rectLight2.lookAt( 0, 0, 0 );					
 	scene.add( rectLight1 );
-	scene.add( rectLight2 );
+	// scene.add( rectLight2 );
 
 	var light = new THREE.HemisphereLight( 0xcceeff, 0xcccccc, 10 );
+	light.position.set(15, 0, 0);
 	scene.add(light);
 
-	var spotLight = new THREE.SpotLight( 0xffffff, 10 ,0,1,0,0.5);
-	spotLight.position.set( 100, 100, 100 );
-	spotLight.shadow.mapSize.width = 1024;
-	spotLight.shadow.mapSize.height = 1024;
+	var ambient = new THREE.AmbientLight( 0xffffff, 10 );
+	scene.add(ambient);
 
-	spotLight.shadow.camera.near = 500;
-	spotLight.shadow.camera.far = 4000;
-	spotLight.shadow.camera.fov = 30;
 
-	scene.add( spotLight );
+
+	// var spotLight = new THREE.SpotLight( 0xffffff, 1000 ,1000,1.05,1,1);
+	// spotLight.position.set( 1000, 0, 0 );
+
+	// scene.add( spotLight );
+
 	camera.position.set( 0, 0, 250 );
 	controls.update();
 }
