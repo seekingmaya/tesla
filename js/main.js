@@ -5,6 +5,7 @@ document.body.addEventListener('touchmove', function(e) { e.preventDefault()}, {
 var mesh;
 var bodyMesh; 
 var currentColor;
+var coeff;
 
 var texture_red, texture_blue, texture_grey, texture_black, texture_white;
 
@@ -19,7 +20,7 @@ document.body.appendChild( renderer.domElement );
 
 var scene = new THREE.Scene();
 scene.background = new THREE.Color( 0xcccccc );
-scene.fog = new THREE.Fog( 0xcccccc, 200, 1000);
+// scene.fog = new THREE.Fog( 0xcccccc, 200, 1000);
 var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
 var controls = new THREE.OrbitControls( camera);
 controls.maxPolarAngle = Math.PI / 2;
@@ -194,10 +195,28 @@ function animate() {
 function onWindowResize(){
 
     camera.aspect = window.innerWidth * 0.99 / window.innerHeight * 0.99;
-    camera.updateProjectionMatrix();
     renderer.setSize( window.innerWidth * 0.99, window.innerHeight * 0.99 );
 	selectedColor(currentColor);
-	camera.position.set( 0, 0, 450 - window.innerWidth/1920 * 250 );
+
+	// CHANGE CAMERA POSITION TO CHANGE VISIBLE MODEL SIZE
+	const box = new THREE.Box3().setFromObject(mesh);
+	const size = box.getSize(new THREE.Vector3());
+	const maxDim = Math.max( size.x, size.y, size.z );
+	const fov = camera.fov * ( Math.PI / 180 );
+
+	if(window.innerWidth < 768) {
+		coeff = 1.5;
+	}
+
+	else {
+		coeff = 0.8;
+	}
+    let cameraZ = maxDim / coeff / Math.tan (fov * camera.aspect / 2);;
+	console.log(cameraZ)
+	
+	camera.position.z = cameraZ;
+
+	camera.updateProjectionMatrix();
 }
 
 window.onorientationchange = function() {

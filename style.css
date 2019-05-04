@@ -69,8 +69,8 @@ canvas-container {
 	}
 
   	.color_selection {
-		  	display: flex;
-			flex-wrap: wrap;
+		display: flex;
+		flex-wrap: wrap;
   		width:100%;
 		bottom:15vh;
 	  	left: 50%;
