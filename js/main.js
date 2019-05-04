@@ -205,7 +205,7 @@ function onWindowResize(){
 	const fov = camera.fov * ( Math.PI / 180 );
 
 	if(window.innerWidth < 768) {
-		coeff = 1.5;
+		coeff = 1.6;
 	}
 
 	else {
