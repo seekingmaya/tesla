@@ -1,11 +1,16 @@
-//fix for scroll bounce
-document.body.addEventListener('touchmove', function(e) { e.preventDefault()}, { passive: false });
+const THREE = window.THREE = require('three');
+
+require('three/examples/js/loaders/GLTFLoader');
+require('three/examples/js/controls/OrbitControls');
+import "./MobileCheck";
 
 
 var mesh;
 var bodyMesh; 
 var currentColor;
 var coeff;
+var renderer;
+var textureCube;
 
 var texture_red, texture_blue, texture_grey, texture_black, texture_white;
 
@@ -61,7 +66,7 @@ function init() {
 
 	currentColor = document.getElementById("select_black");
 	selectedColor(currentColor);
-	var r = "env/";
+	var r = "../assets/env/";
 	var urls = [ r + "px.jpg", r + "nx.jpg",
 				 r + "py.jpg", r + "ny.jpg",
 				 r + "pz.jpg", r + "nz.jpg" ];
@@ -73,7 +78,7 @@ function init() {
 /// CAR SHADOWS -----------------------------------------
 
 
-	var planeTexture = textureLoader.load( 'assets/plane/shade.png');
+	var planeTexture = textureLoader.load( '../assets/plane/shade.png');
 	var geometry = new THREE.PlaneGeometry( 390, 390, 0 );
     var material = new THREE.MeshBasicMaterial( {map:planeTexture, side:THREE.DoubleSide});
 	var plane = new THREE.Mesh( geometry, material );
@@ -83,7 +88,7 @@ function init() {
 
 	var loader = new THREE.GLTFLoader(manager);
 	loader.load(
-		'assets/Tesla_Model_3_DELIVERY.gltf',
+		'../assets/Tesla_Model_3_DELIVERY.gltf',
 		function ( gltf ) {
 			console.log(gltf)
 			console.log(gltf.scene.children[0]);
@@ -99,27 +104,27 @@ function init() {
 		        };
 			});
 
-			texture_black = textureLoader.load('assets/CAR_FRAME_baseColor_black.png' );
+			texture_black = textureLoader.load('../assets/CAR_FRAME_baseColor_black.png' );
 			texture_black.flipY = false;
 			texture_black.wrapS = THREE.RepeatWrapping;
 			texture_black.wrapT = THREE.RepeatWrapping;
 
-			texture_grey = textureLoader.load('assets/CAR_FRAME_baseColor_grey.png' );
+			texture_grey = textureLoader.load('../assets/CAR_FRAME_baseColor_grey.png' );
 			texture_grey.flipY = false;
 			texture_grey.wrapS = THREE.RepeatWrapping;
 			texture_grey.wrapT = THREE.RepeatWrapping;
 
-			texture_blue = textureLoader.load('assets/CAR_FRAME_baseColor_blue.png' );
+			texture_blue = textureLoader.load('../assets/CAR_FRAME_baseColor_blue.png' );
 			texture_blue.flipY = false;
 			texture_blue.wrapS = THREE.RepeatWrapping;
 			texture_blue.wrapT = THREE.RepeatWrapping;
 
-			texture_white = textureLoader.load('assets/CAR_FRAME_baseColor_white.png' );
+			texture_white = textureLoader.load('../assets/CAR_FRAME_baseColor_white.png' );
 			texture_white.flipY = false;
 			texture_white.wrapS = THREE.RepeatWrapping;
 			texture_white.wrapT = THREE.RepeatWrapping;
 
-			texture_red = textureLoader.load('assets/CAR_FRAME_baseColor_red.png' );
+			texture_red = textureLoader.load('../assets/CAR_FRAME_baseColor_red.png' );
 			texture_red.flipY = false;
 			texture_red.wrapS = THREE.RepeatWrapping;
 			texture_red.wrapT = THREE.RepeatWrapping;
