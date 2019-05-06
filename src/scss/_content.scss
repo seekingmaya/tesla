@@ -20,4 +20,21 @@
     display: flex;
     justify-content: center;
   }
+
+  @media (min-width: $desktop) {
+    &__top {
+      padding-left: 3.4vw;
+      padding-right: 3.4vw;
+      justify-content: space-between;
+      padding-top: calc(var(--vh, 1vh) * 4.9);
+    }
+    &__bottom {
+      flex-direction: row;
+      padding-bottom: calc(var(--vh, 1vh) * 4.3);
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 3.4vw;
+      padding-right: 3.4vw;
+    }
+  }
 }

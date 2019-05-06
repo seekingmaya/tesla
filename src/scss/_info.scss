@@ -5,4 +5,8 @@
   &__img {
     width: 100%;
   }
+
+  @media (min-width: $desktop) {
+    width: 39.3vw;
+  }
 }

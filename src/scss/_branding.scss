@@ -11,7 +11,22 @@
       margin-bottom: calc(var(--vh, 1vh) * 3);
     }
     &\--model3 {
-      width: 48vw;
+      //   width: 48vw;
+      font-size: 12vw;
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    align-items: flex-start;
+    &__item {
+      &\--tesla {
+        width: 11.4vw;
+        margin-bottom: calc(var(--vh, 1vh) * 3.6);
+      }
+      &\--model3 {
+        font-size: 3.8vw;
+      }
     }
   }
 }
