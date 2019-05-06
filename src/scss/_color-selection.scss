@@ -8,6 +8,7 @@
     height: 9.6vw;
     position: relative;
     overflow: visible;
+    cursor: pointer;
     &\--selected {
       &:after {
         position: absolute;
