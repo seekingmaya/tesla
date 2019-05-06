@@ -28,7 +28,6 @@ body {
   overscroll-behavior: none;
   overflow: hidden;
   margin: 0;
-  background-color: #cccccc;
   position: relative;
 }
 
@@ -39,16 +38,6 @@ canvas {
   left: 0;
   top: 0;
   z-index: -1;
-}
-
-#loading {
-  /* overscroll-behavior: none; */
-  background: #cccccc;
-  position: absolute;
-  z-index: 0;
-  opacity: 1;
-  transition: 2s;
-  height: 100%;
 }
 
 $desktop: 768px;

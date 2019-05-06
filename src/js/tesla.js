@@ -34,7 +34,7 @@ renderer.domElement.style.overflow = "hidden";
 canvasParent.appendChild(renderer.domElement);
 
 var scene = new THREE.Scene();
-scene.background = new THREE.Color(0xcccccc);
+scene.background = new THREE.Color(0xffffff);
 // scene.fog = new THREE.Fog( 0xcccccc, 200, 1000);
 var camera = new THREE.PerspectiveCamera(
   45,
@@ -63,7 +63,7 @@ function init() {
   manager.onError = function() {};
 
   function allLoaded() {
-    document.getElementById("loading").style.opacity = 0;
+    document.querySelector(".fade-in").style.opacity = 0;
     console.log("OK");
   }
 
