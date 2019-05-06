@@ -4,12 +4,12 @@
   display: flex;
   justify-content: space-between;
 
-  &__img {
-    width: 100%;
+  &__speed-img {
+    height: 5vw;
   }
 
   &__top-item {
-    font-size: 4vw;
+    font-size: 5vw;
     margin-bottom: 0.666em;
   }
   &__bottom-item {
@@ -24,6 +24,11 @@
 
   @media (min-width: $desktop) {
     width: 39.3vw;
+    margin-bottom: 0;
+
+    &__speed-img {
+      height: 2.5vw;
+    }
 
     &__top-item {
       font-size: 2.5vw;

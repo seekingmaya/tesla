@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
-    "three": "^0.101.0",
-    "three-orbitcontrols": "^2.102.1"
+    "three": "^0.101.0"
   }
 }

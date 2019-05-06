@@ -10,6 +10,9 @@ var currentColor;
 var coeff;
 var renderer;
 var textureCube;
+var idleAnimation;
+var animationID;
+var timerId;
 
 var texture_red, texture_blue, texture_grey, texture_black, texture_white;
 
@@ -46,8 +49,14 @@ controls.enablePan = false;
 controls.rotateSpeed = 0.5;
 
 init();
-animate();
+render();
+
 window.addEventListener("resize", onWindowResize, false);
+
+controls.addEventListener("change", () => {
+  restartTimer();
+  render();
+});
 
 function init() {
   /// LOADING MANAGER -----------------------------------------
@@ -158,6 +167,18 @@ function init() {
       scene.add(mesh);
       scene.add(plane);
       onWindowResize();
+
+      idleAnimation = function() {
+        animationID = requestAnimationFrame(function animation(time) {
+          scene.rotation.y += Math.PI / 2000;
+
+          render();
+
+          animationID = requestAnimationFrame(animation);
+        });
+      };
+
+      idleAnimation();
     },
     function(xhr) {
       if (xhr.lengthComputable) {
@@ -200,11 +221,16 @@ function init() {
   controls.update();
 }
 
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
+function render() {
+  // controls.update();
   renderer.render(scene, camera);
 }
+
+// function animate() {
+//   requestAnimationFrame(animate);
+//   controls.update();
+//   renderer.render(scene, camera);
+// }
 
 function onWindowResize() {
   camera.aspect = canvasParent.clientWidth / canvasParent.clientHeight;
@@ -218,9 +244,14 @@ function onWindowResize() {
 
   if (window.innerWidth < 768) {
     coeff = 1.6;
+  } else if (window.innerWidth < 1024) {
+    coeff = 1.4;
+  } else if (window.innerWidth < 1920) {
+    coeff = 1;
   } else {
     coeff = 0.8;
   }
+  console.log(coeff);
   let cameraZ = maxDim / coeff / Math.tan((fov * camera.aspect) / 2);
 
   camera.position.z = cameraZ;
@@ -255,4 +286,13 @@ function selectedColor(elmt) {
     el.classList.remove("color-selection__item--selected")
   );
   elmt.classList.add("color-selection__item--selected");
+}
+
+// RESTART TIMER FUNCTION
+function restartTimer() {
+  cancelAnimationFrame(animationID);
+  clearTimeout(timerId);
+  timerId = setTimeout(() => {
+    idleAnimation();
+  }, 3000);
 }

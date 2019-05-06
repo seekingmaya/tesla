@@ -1,0 +1,564 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 23100,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 5944,
+      "max": [
+        0.409439623355865,
+        -0.0173737406730652,
+        0.791025638580322
+      ],
+      "min": [
+        -0.40943855047226,
+        -0.304437249898911,
+        -0.74721759557724
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 5944,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 5944,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 8208,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 1940,
+      "max": [
+        0.478145033121109,
+        0.304437249898911,
+        1.0
+      ],
+      "min": [
+        -0.478145033121109,
+        -0.238531500101089,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 1940,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 1940,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5125,
+      "count": 9132,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 2392,
+      "max": [
+        0.356941968202591,
+        0.304407984018326,
+        0.590041220188141
+      ],
+      "min": [
+        -0.356940895318985,
+        -0.222935572266579,
+        -0.794144213199615
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 2392,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 2392,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5125,
+      "count": 2352,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 588,
+      "max": [
+        0.367192447185516,
+        0.102417021989822,
+        0.935786306858063
+      ],
+      "min": [
+        -0.36719137430191,
+        -0.042167991399765,
+        -0.954682052135468
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 588,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5126,
+      "count": 588,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 2018.1.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 92400,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 71328,
+      "byteOffset": 92400,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 71328,
+      "byteOffset": 163728,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 47552,
+      "byteOffset": 235056,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32832,
+      "byteOffset": 282608,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23280,
+      "byteOffset": 315440,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 23280,
+      "byteOffset": 338720,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15520,
+      "byteOffset": 362000,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 36528,
+      "byteOffset": 377520,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28704,
+      "byteOffset": 414048,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28704,
+      "byteOffset": 442752,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 19136,
+      "byteOffset": 471456,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9408,
+      "byteOffset": 490592,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7056,
+      "byteOffset": 500000,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7056,
+      "byteOffset": 507056,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4704,
+      "byteOffset": 514112,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 518816,
+      "uri": "Tesla_Model_3_DELIVERY.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "CAR_FRAME_baseColor.png"
+    },
+    {
+      "uri": "CAR_FRAME_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "CAR_FRAME_normal.png"
+    },
+    {
+      "uri": "INTERIOR_LIGHTS_baseColor.png"
+    },
+    {
+      "uri": "INTERIOR_LIGHTS_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "INTERIOR_LIGHTS_normal.png"
+    },
+    {
+      "uri": "INTERIOR_LIGHTS_emissive.png"
+    },
+    {
+      "uri": "INTERIOR_LOW_baseColor.png"
+    },
+    {
+      "uri": "INTERIOR_LOW_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "INTERIOR_LOW_normal.png"
+    },
+    {
+      "uri": "WHEEL_baseColor.png"
+    },
+    {
+      "uri": "WHEEL_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "WHEEL_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "name": "CAR_FRAME",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "emissiveFactor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emissiveTexture": {
+        "index": 6
+      },
+      "name": "INTERIOR_LIGHTS",
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "name": "INTERIOR_LOW",
+      "normalTexture": {
+        "index": 9
+      },
+      "occlusionTexture": {
+        "index": 8
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 7
+        },
+        "metallicRoughnessTexture": {
+          "index": 8
+        }
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "name": "WHEEL",
+      "normalTexture": {
+        "index": 12
+      },
+      "occlusionTexture": {
+        "index": 11
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 10
+        },
+        "metallicRoughnessTexture": {
+          "index": 11
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "4_WHEEL_LOW",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "1_CAROSERIE_LOW",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "2_INTERIOR_LOW",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "3_INTERIOR_FARURI_LOW",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 14,
+            "POSITION": 13,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "name": "CAR_LOW.obj",
+      "scale": [
+        92.1907501220703,
+        92.1907501220703,
+        92.1907501220703
+      ],
+      "translation": [
+        -4.9591064453125e-05,
+        28.2160987854004,
+        0.0233535766601563
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "g 4_WHEEL_LOW"
+    },
+    {
+      "mesh": 0,
+      "name": "4_WHEEL_LOW"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "g 1_CAROSERIE_LOW"
+    },
+    {
+      "mesh": 1,
+      "name": "1_CAROSERIE_LOW"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "g 2_INTERIOR_LOW"
+    },
+    {
+      "mesh": 2,
+      "name": "2_INTERIOR_LOW"
+    },
+    {
+      "children": [
+        8
+      ],
+      "name": "g 3_INTERIOR_FARURI_LOW"
+    },
+    {
+      "mesh": 3,
+      "name": "3_INTERIOR_FARURI_LOW"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    },
+    {
+      "sampler": 0,
+      "source": 9
+    },
+    {
+      "sampler": 0,
+      "source": 10
+    },
+    {
+      "sampler": 0,
+      "source": 11
+    },
+    {
+      "sampler": 0,
+      "source": 12
+    }
+  ]
+}
