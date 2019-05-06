@@ -1,4 +1,5 @@
 import "../scss/main.scss";
+import "./vh-fix";
 import "./tesla";
 
 //fix for scroll bounce

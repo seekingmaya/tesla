@@ -14,6 +14,8 @@ var textureCube;
 
 var texture_red, texture_blue, texture_grey, texture_black, texture_white;
 
+var colorSelections = document.querySelectorAll(".js-color-selection__item");
+
 renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth * 0.99, window.innerHeight * 0.99 );
@@ -42,9 +44,6 @@ window.addEventListener( 'resize', onWindowResize, false);
 
 
 function init() {
-	if(window.mobilecheck() == true) {
-		document.getElementById('order').style.opacity = 0;
-	}
 
 /// LOADING MANAGER -----------------------------------------		
 
@@ -64,8 +63,6 @@ function init() {
 
 /// ENVIRONMENT MAP -----------------------------------------				
 
-	currentColor = document.getElementById("select_black");
-	selectedColor(currentColor);
 	var r = "../assets/env/";
 	var urls = [ r + "px.jpg", r + "nx.jpg",
 				 r + "py.jpg", r + "ny.jpg",
@@ -201,7 +198,6 @@ function onWindowResize(){
 
     camera.aspect = window.innerWidth * 0.99 / window.innerHeight * 0.99;
     renderer.setSize( window.innerWidth * 0.99, window.innerHeight * 0.99 );
-	selectedColor(currentColor);
 
 	// CHANGE CAMERA POSITION TO CHANGE VISIBLE MODEL SIZE
 	const box = new THREE.Box3().setFromObject(mesh);
@@ -232,10 +228,11 @@ window.onorientationchange = function() {
 
 // COLOR SELECTION BORDER CHANGE -----------------------------------------
 
-function colorChange(elmt) {
-	currentColor = elmt;
-	var selected = String(elmt.id);
-	var select = selected.substring(7);
+colorSelections.forEach(el => el.addEventListener("click", colorChange));
+
+function colorChange(event) {
+	currentColor = event.currentTarget;
+	var select = currentColor.dataset.color;
 	selectedColor(currentColor);
 
 	bodyMesh.traverse((node) => {
@@ -246,7 +243,6 @@ function colorChange(elmt) {
 }
 
 function selectedColor(elmt) {
-	var color_selected = document.getElementById("color_selected");
-	color_selected.style.left = String(elmt.getBoundingClientRect().x - 5) + "px";
-	color_selected.style.top = String(elmt.getBoundingClientRect().y - 5) + "px";				
+	colorSelections.forEach(el => el.classList.remove("color-selection__item--selected"));
+	elmt.classList.add("color-selection__item--selected");				
 }		
