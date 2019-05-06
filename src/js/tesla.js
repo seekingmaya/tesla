@@ -16,7 +16,7 @@ var texture_red, texture_blue, texture_grey, texture_black, texture_white;
 var colorSelections = document.querySelectorAll(".js-color-selection__item");
 var canvasParent = document.querySelector(".canvas-parent");
 
-renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(
   canvasParent.clientWidth * 0.99,
@@ -34,7 +34,7 @@ renderer.domElement.style.overflow = "hidden";
 canvasParent.appendChild(renderer.domElement);
 
 var scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff);
+// scene.background = new THREE.Color(0xffffff);
 // scene.fog = new THREE.Fog( 0xcccccc, 200, 1000);
 var camera = new THREE.PerspectiveCamera(
   45,
