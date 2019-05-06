@@ -18,10 +18,7 @@ var canvasParent = document.querySelector(".canvas-parent");
 
 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(
-  canvasParent.clientWidth * 0.99,
-  canvasParent.clientHeight * 0.99
-);
+renderer.setSize(canvasParent.clientWidth, canvasParent.clientHeight);
 console.log(
   canvasParent,
   canvasParent.devicePixelRatio,
@@ -210,12 +207,8 @@ function animate() {
 }
 
 function onWindowResize() {
-  camera.aspect =
-    ((canvasParent.clientWidth * 0.99) / canvasParent.clientHeight) * 0.99;
-  renderer.setSize(
-    canvasParent.clientWidth * 0.99,
-    canvasParent.clientHeight * 0.99
-  );
+  camera.aspect = canvasParent.clientWidth / canvasParent.clientHeight;
+  renderer.setSize(canvasParent.clientWidth, canvasParent.clientHeight);
 
   // CHANGE CAMERA POSITION TO CHANGE VISIBLE MODEL SIZE
   const box = new THREE.Box3().setFromObject(mesh);
