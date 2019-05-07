@@ -59,13 +59,14 @@ html,
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  overflow: hidden;
-  font-family: "Gotham Medium"; }
+  font-family: "Gotham Medium";
+  line-height: normal; }
 
 html {
   height: calc(var(--vh, 1vh) * 100);
   min-height: calc(var(--vh, 1vh) * 100);
-  max-height: calc(var(--vh, 1vh) * 100); }
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden; }
 
 body {
   height: 100%;
@@ -75,6 +76,7 @@ body {
   overflow: hidden;
   margin: 0;
   position: relative;
+  overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#899ab6), color-stop(80%, #b8b3b7), to(#b6aba9));
   background: linear-gradient(to bottom, #899ab6 0%, #b8b3b7 80%, #b6aba9 100%); }
 
@@ -85,6 +87,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   margin-bottom: calc(var(--vh, 1vh) * 7.2); }
   .color-selection__item {
