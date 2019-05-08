@@ -62,7 +62,17 @@ function init() {
   /// LOADING MANAGER -----------------------------------------
 
   var manager = new THREE.LoadingManager();
-  manager.onProgress = function(item, loaded, total) {};
+  manager.onProgress = function(item, loaded, total) {
+    // console.log(
+    //   "Loading file: " +
+    //     item +
+    //     ".\nLoaded " +
+    //     loaded +
+    //     " of " +
+    //     total +
+    //     " files."
+    // );
+  };
   manager.onLoad = function() {
     setTimeout(allLoaded, 500);
   };

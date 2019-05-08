@@ -77,8 +77,7 @@ body {
   margin: 0;
   position: relative;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#899ab6), color-stop(80%, #b8b3b7), to(#b6aba9));
-  background: linear-gradient(to bottom, #899ab6 0%, #b8b3b7 80%, #b6aba9 100%); }
+  background-color: #f8fbff; }
 
 .color-selection {
   display: -webkit-box;
@@ -204,13 +203,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
   .button\--desktop {
     display: none; }
   .button:active {
     background-color: #ffffff; }
     .button:active .button__text {
-      color: #000000; }
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      color: #000000;
+      text-decoration: none; }
   .button__text {
     font-size: 3.46vw;
     font-weight: 500;
@@ -219,7 +224,7 @@ body {
     color: white; }
   @media (min-width: 768px) {
     .button {
-      background-color: white;
+      background-color: transparent;
       width: 12.76vw;
       height: 3.9vw;
       border-radius: 2.29vw; }
@@ -232,7 +237,8 @@ body {
       .button:hover {
         background-color: black; }
         .button:hover .button__text {
-          color: white; }
+          color: white;
+          text-decoration: none; }
       .button__text {
         color: black;
         font-size: 1.27vw; } }
