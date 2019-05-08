@@ -62,7 +62,17 @@ function init() {
   /// LOADING MANAGER -----------------------------------------
 
   var manager = new THREE.LoadingManager();
-  manager.onProgress = function(item, loaded, total) {};
+  manager.onProgress = function(item, loaded, total) {
+    // console.log(
+    //   "Loading file: " +
+    //     item +
+    //     ".\nLoaded " +
+    //     loaded +
+    //     " of " +
+    //     total +
+    //     " files."
+    // );
+  };
   manager.onLoad = function() {
     setTimeout(allLoaded, 500);
   };
@@ -247,7 +257,7 @@ function onWindowResize() {
   } else if (window.innerWidth < 1024) {
     coeff = 1.4;
   } else if (window.innerWidth < 1920) {
-    coeff = 1.2;
+    coeff = 1;
   } else {
     coeff = 0.8;
   }
