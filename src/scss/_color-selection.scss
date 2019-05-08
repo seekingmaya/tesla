@@ -1,6 +1,7 @@
 .color-selection {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: calc(var(--vh, 1vh) * 7.2);
   &__item {
