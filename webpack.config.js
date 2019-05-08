@@ -1,16 +1,15 @@
-const path = require('path');
+const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WebpackPwaManifest = require("webpack-pwa-manifest");
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-
 module.exports = {
-  entry: './src/js/main.js',
+  entry: "./src/js/main.js",
   output: {
-    path: path.resolve(__dirname, 'docs'),
-    filename: 'script.js'
+    path: path.resolve(__dirname, "docs"),
+    filename: "script.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "docs"),
@@ -23,13 +22,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: "babel-loader"
         }
       },
       {
         test: /\.html$/,
         //exclude: /index\.html$/, //without this HtmlWebPackPlugin will not work with template file correctly
-        include: path.join(__dirname, 'src/html'),
+        include: path.join(__dirname, "src/html"),
         use: [
           {
             loader: "html-loader",
@@ -44,14 +43,13 @@ module.exports = {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: "css-loader", options: { importLoaders: 1 } },
           {
-            loader: 'postcss-loader', options: {
+            loader: "postcss-loader",
+            options: {
               sourceMap: true,
-              ident: 'postcss',
-              plugins: () => [
-                require("autoprefixer")()
-              ]
+              ident: "postcss",
+              plugins: () => [require("autoprefixer")()]
             }
           },
           {
@@ -63,12 +61,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.(eot|woff|woff2|ttf)$/,
+        test: /\.(eot|woff|woff2|ttf|otf)$/,
         use: {
           loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/'
+            name: "[name].[ext]",
+            outputPath: "fonts/"
           }
         }
       },
@@ -77,8 +75,8 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: 'assets/'
+            name: "[name].[ext]",
+            outputPath: "assets/"
           }
         }
       },
@@ -87,8 +85,8 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: 'assets/'
+            name: "[name].[ext]",
+            outputPath: "assets/"
           }
         }
       },
@@ -97,25 +95,23 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: './'
+            name: "[name].[ext]",
+            outputPath: "./"
           }
         }
-      },
+      }
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      title: 'Title',
+      title: "Title",
       template: "./src/html/index.html",
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].css"
     }),
-    new CopyWebpackPlugin([
-      { from: 'src/assets', to: 'assets' }
-    ]),
+    new CopyWebpackPlugin([{ from: "src/assets", to: "assets" }])
     // new WebpackPwaManifest({
     //   name: 'tesla',
     //   description: 'etcetera is a design studio',
