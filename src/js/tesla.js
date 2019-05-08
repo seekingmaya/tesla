@@ -247,7 +247,7 @@ function onWindowResize() {
   } else if (window.innerWidth < 1024) {
     coeff = 1.4;
   } else if (window.innerWidth < 1920) {
-    coeff = 1.2;
+    coeff = 1;
   } else {
     coeff = 0.8;
   }

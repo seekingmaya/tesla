@@ -2,7 +2,8 @@
   font-family: "Gotham Medium";
   font-style: normal;
   font-weight: 500;
-  src: local("Gotham Medium"), url("../font/GothamMedium.woff") format("woff");
+  src: local("Gotham Medium"),
+    url("../font/GothamMedium.ttf") format("truetype");
 }
 
 *,
