@@ -101,7 +101,7 @@ function init() {
 
   /// CAR SHADOWS -----------------------------------------
 
-  var planeTexture = textureLoader.load("../assets/plane/shade.png");
+  var planeTexture = textureLoader.load("../assets/plane/plane.jpeg");
   var geometry = new THREE.PlaneGeometry(390, 390, 0);
   var material = new THREE.MeshBasicMaterial({
     map: planeTexture,
