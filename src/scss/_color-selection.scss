@@ -9,6 +9,9 @@
     height: 9.33vw;
     position: relative;
     overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     &\--selected {
       &:after {
@@ -28,10 +31,6 @@
   &__img {
     width: calc(100% - 9px);
     height: calc(100% - 9px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   @media (min-width: $desktop) {
@@ -44,8 +43,8 @@
     }
 
     &__img {
-      width: calc(100% - 18px);
-      height: calc(100% - 18px);
+      width: calc(80%);
+      height: calc(80%);
     }
   }
 }

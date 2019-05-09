@@ -165,7 +165,7 @@ function init() {
       bodyMesh.traverse(node => {
         if (node.isMesh) {
           console.log(node);
-          node.material.map = texture_black;
+          node.material.map = texture_red;
         }
       });
       mesh.position.y = 2;
@@ -255,7 +255,9 @@ function onWindowResize() {
   if (window.innerWidth < 768) {
     coeff = 1.6;
   } else if (window.innerWidth < 1024) {
-    coeff = 1.4;
+    coeff = 1.2;
+  } else if (window.innerWidth == 1024) {
+    coeff = 1;
   } else {
     coeff = 0.7;
   }

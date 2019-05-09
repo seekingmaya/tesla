@@ -69,8 +69,9 @@ html {
   overflow: hidden; }
 
 body {
-  height: 100%;
-  min-height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
   overflow: hidden;
@@ -96,6 +97,15 @@ body {
     height: 9.33vw;
     position: relative;
     overflow: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer; }
     .color-selection__item\--selected:after {
       position: absolute;
@@ -110,12 +120,7 @@ body {
       border-radius: 50%; }
   .color-selection__img {
     width: calc(100% - 9px);
-    height: calc(100% - 9px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+    height: calc(100% - 9px); }
   @media (min-width: 768px) {
     .color-selection {
       width: 34vw;
@@ -124,8 +129,8 @@ body {
         width: 4.255vw;
         height: 4.255vw; }
       .color-selection__img {
-        width: calc(100% - 18px);
-        height: calc(100% - 18px); } }
+        width: calc(80%);
+        height: calc(80%); } }
 
 .content {
   height: 100%;
@@ -210,7 +215,7 @@ body {
   .button\--desktop {
     display: none; }
   .button:active {
-    background-color: #ffffff; }
+    background-color: transparent; }
     .button:active .button__text {
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
@@ -221,7 +226,7 @@ body {
     font-weight: 500;
     letter-spacing: 0.91px;
     text-transform: uppercase;
-    color: white; }
+    color: #f8fbff; }
   @media (min-width: 768px) {
     .button {
       background-color: transparent;
@@ -237,7 +242,7 @@ body {
       .button:hover {
         background-color: black; }
         .button:hover .button__text {
-          color: white;
+          color: #f8fbff;
           text-decoration: none; }
       .button__text {
         color: black;
@@ -256,9 +261,6 @@ body {
           align-items: center; }
   .branding__img {
     width: 100%; }
-  .branding__item\--tesla {
-    width: 28.8vw;
-    margin-bottom: calc(var(--vh, 1vh) * 3); }
   .branding__item\--model3 {
     font-size: 12vw;
     white-space: nowrap; }
@@ -267,9 +269,6 @@ body {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
-      .branding__item\--tesla {
-        width: 11.4vw;
-        margin-bottom: calc(var(--vh, 1vh) * 3.6); }
       .branding__item\--model3 {
         font-size: 3.8vw; } }
 
@@ -286,7 +285,7 @@ body {
     height: 5vw; }
   .info__top-item {
     font-size: 5vw;
-    margin-bottom: 0.666em; }
+    margin-bottom: 0.35em; }
   .info__bottom-item {
     font-size: 2.6vw; }
   .info__item {
@@ -318,7 +317,7 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
-  top: calc(var(--vh, 1vh) * (-10)); }
+  top: calc(var(--vh, 1vh) * (-13)); }
   .canvas-parent canvas {
     height: 100%; }
   @media (min-width: 768px) {
