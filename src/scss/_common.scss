@@ -6,6 +6,9 @@
     url("../font/GothamMedium.otf") format("opentype");
 }
 
+$desktop: 768px;
+$background-color: #f8fbff;
+
 *,
 body,
 html,
@@ -38,7 +41,5 @@ body {
   //   rgb(184, 179, 183) 80%,
   //   rgb(182, 171, 169) 100%
   // );
-  background-color: #f8fbff;
+  background-color: $background-color;
 }
-
-$desktop: 768px;

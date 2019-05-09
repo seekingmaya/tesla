@@ -101,7 +101,7 @@ function init() {
 
   /// CAR SHADOWS -----------------------------------------
 
-  var planeTexture = textureLoader.load("../assets/plane/shade.png");
+  var planeTexture = textureLoader.load("../assets/plane/plane.jpeg");
   var geometry = new THREE.PlaneGeometry(390, 390, 0);
   var material = new THREE.MeshBasicMaterial({
     map: planeTexture,
@@ -257,7 +257,7 @@ function onWindowResize() {
   } else if (window.innerWidth < 1024) {
     coeff = 1.4;
   } else {
-    coeff = 0.8;
+    coeff = 0.7;
   }
   console.log(coeff);
   let cameraZ = maxDim / coeff / Math.tan((fov * camera.aspect) / 2);

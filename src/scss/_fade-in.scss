@@ -1,6 +1,6 @@
 .fade-in {
   /* overscroll-behavior: none; */
-  background: #cccccc;
+  background: $background-color;
   width: 100%;
   position: absolute;
   z-index: 0;
@@ -10,4 +10,7 @@
   left: 0;
   top: 0;
   z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
