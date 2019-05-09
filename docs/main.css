@@ -192,6 +192,9 @@ body {
               align-items: center;
       padding-left: 3.4vw;
       padding-right: 3.4vw; } }
+  @media (max-width: 767px) and (orientation: landscape), (device-width: 812px) and (device-height: 375px) and (orientation: landscape) {
+    .content {
+      display: none; } }
 
 .button {
   width: 38.9vw;
@@ -261,14 +264,18 @@ body {
           align-items: center; }
   .branding__img {
     width: 100%; }
+  .branding__item\--tesla {
+    font-size: 8vw;
+    margin-bottom: calc(var(--vh, 1vh) * 2); }
   .branding__item\--model3 {
     font-size: 12vw;
     white-space: nowrap; }
   @media (min-width: 768px) {
     .branding {
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start; }
+      display: block; }
+      .branding__item\--tesla {
+        font-size: 3.8vw;
+        margin-bottom: 0; }
       .branding__item\--model3 {
         font-size: 3.8vw; } }
 
@@ -317,10 +324,10 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
-  top: calc(var(--vh, 1vh) * (-13)); }
+  top: calc(var(--vh, 1vh) * (-9.5)); }
   .canvas-parent canvas {
     height: 100%; }
-  @media (min-width: 768px) {
+  @media (min-width: 768px), (orientation: landscape) {
     .canvas-parent {
       top: 0;
       bottom: 0; } }
@@ -347,6 +354,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .fade-in__loader {
+    margin-top: calc(var(--vh, 1vh) * (-16)); }
+  @media (min-width: 768px), (orientation: landscape) {
+    .fade-in__loader {
+      margin-top: 0; } }
 
 
 /*# sourceMappingURL=main.css.map*/

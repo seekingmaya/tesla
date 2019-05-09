@@ -13,4 +13,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &__loader {
+    margin-top: calc(var(--vh, 1vh) * (-16));
+  }
+  @media (min-width: $desktop), (orientation: landscape) {
+    &__loader {
+      margin-top: 0;
+    }
+  }
 }
