@@ -37,4 +37,8 @@
       padding-right: 3.4vw;
     }
   }
+  @media (max-width: 767px) and (orientation: landscape),
+    (device-width: 812px) and (device-height: 375px) and (orientation: landscape) {
+    display: none;
+  }
 }

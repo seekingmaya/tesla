@@ -19,6 +19,10 @@ var texture_red, texture_blue, texture_grey, texture_black, texture_white;
 var colorSelections = document.querySelectorAll(".js-color-selection__item");
 var canvasParent = document.querySelector(".canvas-parent");
 
+var mobileLandscape = window.matchMedia(
+  "(orientation: landscape) and (max-width: 767px), (device-width: 812px) and (device-height: 375px) and (orientation: landscape),(device-width : 896px) and (device-height : 414px) and and (orientation: landscape)"
+);
+
 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(canvasParent.clientWidth, canvasParent.clientHeight);
@@ -39,7 +43,7 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(
   45,
   canvasParent.clientWidth / canvasParent.clientHeight,
-  1,
+  0.1,
   10000
 );
 var controls = new THREE.OrbitControls(camera);
@@ -252,11 +256,11 @@ function onWindowResize() {
   const maxDim = Math.max(size.x, size.y, size.z);
   const fov = camera.fov * (Math.PI / 180);
 
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 768 && !mobileLandscape.matches) {
     coeff = 1.6;
-  } else if (window.innerWidth < 1024) {
-    coeff = 1.2;
-  } else if (window.innerWidth == 1024) {
+  } else if (mobileLandscape.matches && window.innerWidth > 768) {
+    coeff = 0.7;
+  } else if (mobileLandscape.matches || window.innerWidth < 1025) {
     coeff = 1;
   } else {
     coeff = 0.7;
