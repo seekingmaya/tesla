@@ -268,16 +268,16 @@ body {
     font-size: 8vw;
     margin-bottom: calc(var(--vh, 1vh) * 2); }
   .branding__item\--model3 {
-    font-size: 12vw;
+    font-size: 10.5vw;
     white-space: nowrap; }
   @media (min-width: 768px) {
     .branding {
       display: block; }
       .branding__item\--tesla {
-        font-size: 3.8vw;
+        font-size: 3.4vw;
         margin-bottom: 0; }
       .branding__item\--model3 {
-        font-size: 3.8vw; } }
+        font-size: 3.4vw; } }
 
 .info {
   width: 100%;
