@@ -1,7 +1,7 @@
 import "@babel/polyfill";
 import "../scss/main.scss";
-import "./vh-fix";
-import "./tesla";
+import calculateVH from "./vh-fix";
+import loadModel from "./tesla";
 
 //fix for scroll bounce
 document.body.addEventListener(
@@ -11,3 +11,8 @@ document.body.addEventListener(
   },
   { passive: false }
 );
+
+window.addEventListener("DOMContentLoaded", function() {
+  calculateVH();
+  loadModel();
+});
