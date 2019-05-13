@@ -187,7 +187,7 @@ function loadModel() {
 
         idleAnimation = function() {
           animationID = requestAnimationFrame(function animation(time) {
-            scene.rotation.y += Math.PI / 2000;
+            scene.rotation.y += Math.PI / 12000;
 
             render();
 
