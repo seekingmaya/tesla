@@ -355,10 +355,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center; }
   .fade-in__loader {
-    margin-top: calc(var(--vh, 1vh) * (-16)); }
+    margin-top: calc(var(--vh, 1vh) * (-16));
+    height: 10vh; }
   @media (min-width: 768px), (orientation: landscape) {
     .fade-in__loader {
-      margin-top: 0; } }
+      margin-top: 0;
+      height: 17vh;
+      max-height: 415px; } }
 
 
 /*# sourceMappingURL=main.css.map*/
