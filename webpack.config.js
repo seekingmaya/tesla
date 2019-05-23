@@ -103,12 +103,12 @@ module.exports = {
         }
       },
       {
-        test: /\.(ico)$/,
+        test: /\.ico$/,
         use: {
           loader: "file-loader",
           options: {
             name: "[name].[ext]",
-            outputPath: "./"
+            outputPath: "images/"
           }
         }
       }
