@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Gotham Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gotham Medium"),
+    url("../font/GothamMedium.otf") format("opentype");
+}
+
+$desktop: 768px;
+$background-color: #f8fbff;
+
+*,
+body,
+html,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  font-family: "Gotham Medium";
+  line-height: normal;
+}
+
+html {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+body {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
+  overscroll-behavior: none;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  // background: linear-gradient(
+  //   to bottom,
+  //   rgb(137, 154, 182) 0%,
+  //   rgb(184, 179, 183) 80%,
+  //   rgb(182, 171, 169) 100%
+  // );
+  background-color: $background-color;
+}

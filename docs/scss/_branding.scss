@@ -1,0 +1,33 @@
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__img {
+    width: 100%;
+  }
+  &__item {
+    &\--tesla {
+      font-size: 8vw;
+      margin-bottom: calc(var(--vh, 1vh) * 2);
+    }
+    &\--model3 {
+      //   width: 48vw;
+      font-size: 10.5vw;
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    &__item {
+      &\--tesla {
+        font-size: 3.4vw;
+        margin-bottom: 0;
+      }
+
+      &\--model3 {
+        font-size: 3.4vw;
+      }
+    }
+  }
+}

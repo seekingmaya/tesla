@@ -72,6 +72,7 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|svg|gif)$/,
+        include: path.join(__dirname, "src/assets"),
         use: {
           loader: "file-loader",
           options: {
@@ -81,12 +82,23 @@ module.exports = {
         }
       },
       {
+        test: /\.(jpg|png|svg|gif)$/,
+        include: path.join(__dirname, "src/images"),
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            outputPath: "images/"
+          }
+        }
+      },
+      {
         test: /\.(glb|gltf|bin)$/,
         use: {
           loader: "file-loader",
           options: {
             name: "[name].[ext]",
-            outputPath: "assets/"
+            outputPath: "images/"
           }
         }
       },

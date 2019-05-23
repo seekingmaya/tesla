@@ -1,0 +1,18 @@
+.canvas-parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  z-index: -1;
+  top: calc(var(--vh, 1vh) * (-9.5));
+  canvas {
+    height: 100%;
+  }
+
+  @media (min-width: $desktop), (orientation: landscape) {
+    top: 0;
+    bottom: 0;
+  }
+}
