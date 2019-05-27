@@ -360,7 +360,7 @@ body {
   @media (min-width: 768px), (orientation: landscape) {
     .fade-in__loader {
       margin-top: 0;
-      height: 17vh;
+      height: 23vh;
       max-height: 415px; } }
 
 
